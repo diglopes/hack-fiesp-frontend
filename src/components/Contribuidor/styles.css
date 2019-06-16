@@ -1,0 +1,37 @@
+#contribuidor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#contribuidor div> :not(:last-child) {
+    margin-right: 10px;
+}
+
+#contribuidor img {
+    height: 25px;
+    border-radius: 50%
+}
+
+#contribuidor .nome {
+    color: #333;
+    font-size: 14px;
+}
+
+#contribuidor .gold {
+    color: #f1c40f;
+}
+
+#contribuidor .ponto {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#contribuidor .fas {
+    font-size: 20px;
+}
+
+#contribuidor .info {}
+
+#contribuidor .pontuacao {}

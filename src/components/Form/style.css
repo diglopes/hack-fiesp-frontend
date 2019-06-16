@@ -3,6 +3,10 @@
     padding-bottom: 50px;
 }
 
+#formulario>input {
+    margin-bottom: 5px;
+}
+
 #formulario .btn {
     margin-top: 10px;
 }

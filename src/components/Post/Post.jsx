@@ -1,32 +1,45 @@
-import React, { Component } from "react";
+import React from "react";
+import api from "../../services/api";
 
 import "./style.css";
 
-export default class Post extends Component {
-  render() {
-    return (
-      <article id="feed-card">
-        <div className="body">
-          <h3>Titulo de um projeto</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            nostrum optio sequi ex, quo inventore fugit porro quos eius cum!
-          </p>
-          <div className="tags">
-            <span>#saude</span>
-            <span>#sus</span>
-          </div>
-        </div>
-        <div className="interaction">
-          <div className="interaction-number">
-            <p>0</p>
-          </div>
-          <div className="social">
-            <i class="fas fa-thumbs-up" />
-            <i class="fas fa-thumbs-down" />
-          </div>
-        </div>
-      </article>
-    );
+export default props => {
+  const { postagem } = props;
+
+  function handleLike(id) {
+    api.post(`/postsLike/${id}`);
   }
-}
+
+  function handleDislike(id) {
+    api.post(`/postsDislike/${id}`);
+  }
+
+  return (
+    <article id="feed-card">
+      <div className="body">
+        <h3>{postagem.titulo}</h3>
+        <p>{postagem.descricao}</p>
+        <div className="tags">
+          {postagem.tags.map((tag, index) => (
+            <span key={index}>#{tag}</span>
+          ))}
+        </div>
+      </div>
+      <div className="interaction">
+        <div className="interaction-number">
+          <p>{postagem.avaliacao}</p>
+        </div>
+        <div className="social">
+          <i
+            className="fas fa-thumbs-up"
+            onClick={() => handleLike(postagem._id)}
+          />
+          <i
+            className="fas fa-thumbs-down"
+            onClick={() => handleDislike(postagem._id)}
+          />
+        </div>
+      </div>
+    </article>
+  );
+};
