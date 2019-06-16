@@ -1,0 +1,60 @@
+#feed-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+}
+
+#feed-card h3 {
+    font-size: 18px;
+}
+
+#feed-card p {
+    color: #999
+}
+
+#feed-card .body {
+    margin-right: 20px;
+}
+
+#feed-card .interaction {
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+#feed-card .social {
+    display: flex;
+}
+
+#feed-card .social>* {
+    cursor: pointer;
+}
+
+#feed-card .social> :first-child {
+    margin-right: 40px;
+}
+
+#feed-card .social> :first-child:hover {
+    color: #2ecc71;
+}
+
+#feed-card .social>i:nth-child(2) {
+    margin-top: 8px;
+}
+
+#feed-card .social> :nth-child(2):hover {
+    color: #e74c3c;
+}
+
+#feed-card .tags {
+    color: #3498db;
+}
+
+#feed-card .tags>span {
+    margin-right: 10px;
+}

@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom";
 
+import "./style.css";
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +16,10 @@ function App() {
       <Banner />
       <div className="container">
         <div className="row">
-          <Routes class="col-md-8" />
+          <div className="col-md-8" id="rota">
+            <Routes />
+          </div>
+          <div className="col-md-4" id="side-bar" />
         </div>
       </div>
     </BrowserRouter>
