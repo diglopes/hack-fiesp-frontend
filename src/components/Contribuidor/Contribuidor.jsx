@@ -15,7 +15,7 @@ const Contribuidor = props => {
       </div>
       <div className="pontuacao">
         <span className="ponto">{props.pontos} pts</span>
-        <i className="fas fa-medal " style={medal} />
+        <i className="fas fa-feather " style={medal} />
       </div>
     </div>
   );

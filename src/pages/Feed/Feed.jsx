@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import api from "../../services/api";
 import io from "socket.io-client";
+import { Spring } from "react-spring/renderprops";
 
 import "./style.css";
 
@@ -32,8 +33,18 @@ export default class Feed extends Component {
   render() {
     return (
       <section id="feed">
-        {this.state.posts.map(postagem => (
-          <Post key={postagem._id} postagem={postagem} />
+        {this.state.posts.map((postagem, index) => (
+          <Spring
+            from={{ opacity: 0, transform: "translate3d(0, 400px, 0)" }}
+            to={{ opacity: 1, transform: "translate3d(0, 0px, 0)" }}
+            config={{ delay: 100 * (index + 1) }}
+          >
+            {style => (
+              <div style={style}>
+                <Post key={postagem._id} postagem={postagem} />
+              </div>
+            )}
+          </Spring>
         ))}
       </section>
     );
