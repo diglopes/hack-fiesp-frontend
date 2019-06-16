@@ -27,7 +27,15 @@ export default props => {
       </div>
       <div className="interaction">
         <div className="interaction-number">
-          <p>{postagem.avaliacao}</p>
+          <p
+            style={
+              postagem.avaliacao > 0
+                ? { color: "#2ecc71" }
+                : { color: "#e74c3c" }
+            }
+          >
+            {postagem.avaliacao}
+          </p>
         </div>
         <div className="social">
           <i
