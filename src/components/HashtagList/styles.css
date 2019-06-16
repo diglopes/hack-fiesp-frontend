@@ -1,0 +1,33 @@
+#taglist {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#taglist .taglist-header {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+#taglist .taglist-header p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+#taglist .taglist-body {
+    margin-top: 10px;
+}
+
+#taglist .taglist-body a {
+    display: block;
+}
+
+#taglist .taglist-body-item {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 16px;
+    margin-bottom: 10px;
+    ;
+}

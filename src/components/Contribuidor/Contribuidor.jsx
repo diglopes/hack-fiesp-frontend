@@ -1,18 +1,21 @@
 import React from "react";
 
 import "./styles.css";
-import user from "../../assets/user.jpg";
 
-const Contribuidor = () => {
+const Contribuidor = props => {
+  const medal = {
+    color: props.medalha
+  };
+
   return (
     <div id="contribuidor">
       <div className="info">
-        <img src={user} alt="" />
-        <span className="nome">Carlos Roberto</span>
+        <img src={props.imagem} alt="" />
+        <span className="nome">{props.nome}</span>
       </div>
       <div className="pontuacao">
-        <span className="ponto">589 pts</span>
-        <i className="fas fa-medal gold" />
+        <span className="ponto">{props.pontos} pts</span>
+        <i className="fas fa-medal " style={medal} />
       </div>
     </div>
   );

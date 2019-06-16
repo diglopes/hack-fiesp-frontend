@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import imgUser from "../../assets/user.jpg";
+import imgUser from "../../assets/user1.jpg";
 
 export default props => {
   return (
