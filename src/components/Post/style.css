@@ -4,6 +4,7 @@
     border-radius: 3px;
     padding: 20px;
     display: flex;
+    margin-bottom: 20px;
 }
 
 #feed-card h3 {

@@ -1,0 +1,21 @@
+#formulario {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 50px;
+}
+
+#formulario .btn {
+    margin-top: 10px;
+}
+
+#formulario label {
+    font-size: 18px;
+    display: block;
+    background: #ddd;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #666;
+}
+
+#formulario-projeto {
+    resize: none;
+}

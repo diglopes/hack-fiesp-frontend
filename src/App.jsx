@@ -5,6 +5,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./components/Header";
 import Banner from "./components/Banner";
+import Form from "./components/Form";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom";
 
 import "./style.css";
@@ -17,6 +18,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-8" id="rota">
+            <Form />
             <Routes />
           </div>
           <div className="col-md-4" id="side-bar" />
